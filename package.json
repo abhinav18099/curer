@@ -1,0 +1,21 @@
+{
+  "name": "site",
+  "version": "1.0.0",
+  "description": "\" A doctor-patient connector website\"",
+  "main": "curer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "\u0016https://github.com/abhinav18099/curer.git"
+  },
+  "author": "Abhinav Kumar , Rahul Anand",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^3.4.1",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.0.0",
+    "jquery": "^3.5.1"
+  }
+}

@@ -1,0 +1,77 @@
+<div class="form-container sign-in-container"> <!-- sign in block code start-->
+		<form action="#">
+			<h1>Sign in</h1>
+			<div class="form-group">
+                <label for="email_log" class="col-sm-2 control-label">Email:</label>
+                    <input type="email" name="email_log" id="email_log" class="form-control" placeholder="Email Address">
+                    
+                </div>
+                <div class="form-group">
+                    <label for="password_log" class="col-sm-2 control-label">Password:</label>
+                    
+                    <input type="password" name="password_log" id="password_log" class="form-control" placeholder="Password">
+                   
+                </div>
+			
+            
+            <a href="#">Forgot your password?</a>
+			<input type="submit" value="Log In" class="btn btn-info">
+		</form>
+	   </div> <!-- sign in block code  end -->
+        <div class="form-container sign-up-container"> <!-- new user register form  code start -->
+        <form role="form" class="form-horizontal" action="#">
+                <div class="form-group">
+                    <label class="control-label">Occupation:</label>
+                    <select id="person" class="form-control">
+                    <option>Doctor</option>
+                    <option>Patient</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="name" class="control-label">Name:</label>                   
+                    <input type="text" name="name" id="name" class="form-control" placeholder="Last Name">                   
+                </div>
+                <div class="form-group">
+                    <label for="email" class="control-label">Email:</label>                   
+                    <input type="email" name="email" id="email" class="form-control" placeholder="Email Address">                    
+                </div>
+                <div class="form-group">
+                    <label for="password" class="control-label">Password:</label>                    
+                    <input type="password" name="password" id="password" class="form-control" placeholder="Password">                    
+                </div>
+                <div class="form-group">
+                    <label for="password_conf" class="control-label">Confirm Password:</label>    
+                    <input type="password" name="password_confirmation" id="password_conf" class="form-control" placeholder="Confirm Password">    
+                </div>
+                <input type="submit" value="Register" class="btn btn-info">
+        </form></div>   <!-- new user register form  code end -->
+        	<div class="overlay-container"> <!-- side panel code with ghost button start -->
+		        <div class="overlay">
+			        <div class="overlay-panel overlay-left">
+				    <h1>Welcome Back!</h1>
+				    <p>To keep connected with us please login with your personal info</p>
+				    <button class="ghost" id="signIn">Sign In</button>
+			    </div>
+			    <div class="overlay-panel overlay-right">
+				    <h1>Hello, Friend!</h1>
+				    <p>Enter your personal details and start journey with us</p>
+			    	<button class="ghost" id="signUp">Sign Up</button>
+			    </div>
+		    </div> <!-- side panel code with ghost button end -->
+	    </div>
+
+    {{#section 'jquery'}}
+        <script>
+            const signUpButton = document.getElementById('signUp');
+            const signInButton = document.getElementById('signIn');
+            const container = document.getElementById('container');
+
+            signUpButton.addEventListener('click', () => {
+                container.classList.add("right-panel-active");
+            });
+
+            signInButton.addEventListener('click', () => {
+                container.classList.remove("right-panel-active");
+            }); 
+        </script>
+    {{/section}}
