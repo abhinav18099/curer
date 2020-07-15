@@ -1,5 +1,5 @@
 <div class="form-container sign-in-container"> <!-- sign in block code start-->
-		<form action="#">
+		<form action="/login" method="POST">
 			<h1>Sign in</h1>
 			<div class="form-group">
                 <label for="email_log" class="col-sm-2 control-label">Email:</label>
@@ -19,29 +19,29 @@
 		</form>
 	   </div> <!-- sign in block code  end -->
         <div class="form-container sign-up-container"> <!-- new user register form  code start -->
-        <form role="form" class="form-horizontal" action="#">
+        <form role="form" class="form-horizontal" action="/signup" method="POST">
                 <div class="form-group">
                     <label class="control-label">Occupation:</label>
-                    <select id="person" class="form-control">
-                    <option>Doctor</option>
-                    <option>Patient</option>
+                    <select id="person"  name="person" class="form-control" required>
+                    <option value="D">Doctor</option>
+                    <option value="P">Patient</option>
                     </select>
                 </div>
                 <div class="form-group">
                     <label for="name" class="control-label">Name:</label>                   
-                    <input type="text" name="name" id="name" class="form-control" placeholder="Last Name">                   
+                    <input type="text" name="name" id="name" class="form-control" placeholder="Last Name" required>                   
                 </div>
                 <div class="form-group">
                     <label for="email" class="control-label">Email:</label>                   
-                    <input type="email" name="email" id="email" class="form-control" placeholder="Email Address">                    
+                    <input type="email" name="email" id="email" class="form-control" placeholder="Email Address" required>                    
                 </div>
                 <div class="form-group">
                     <label for="password" class="control-label">Password:</label>                    
-                    <input type="password" name="password" id="password" class="form-control" placeholder="Password">                    
+                    <input type="password" name="password" id="password" class="form-control" placeholder="Password" required>                    
                 </div>
                 <div class="form-group">
                     <label for="password_conf" class="control-label">Confirm Password:</label>    
-                    <input type="password" name="password_confirmation" id="password_conf" class="form-control" placeholder="Confirm Password">    
+                    <input type="password" name="password_confirmation" id="password_conf" class="form-control" placeholder="Confirm Password" required>    
                 </div>
                 <input type="submit" value="Register" class="btn btn-info">
         </form></div>   <!-- new user register form  code end -->
